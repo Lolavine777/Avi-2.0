@@ -1,67 +1,98 @@
 {
   "_args": [
     [
-      "lodash@4.17.15",
+      "uuid@3.3.3",
       "C:\\Users\\ADMIN\\Downloads\\hentaibot-master"
     ]
   ],
-  "_from": "lodash@4.17.15",
-  "_id": "lodash@4.17.15",
+  "_from": "uuid@3.3.3",
+  "_id": "uuid@3.3.3",
   "_inBundle": false,
-  "_integrity": "sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==",
-  "_location": "/lodash",
+  "_integrity": "sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==",
+  "_location": "/uuid",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "lodash@4.17.15",
-    "name": "lodash",
-    "escapedName": "lodash",
-    "rawSpec": "4.17.15",
+    "raw": "uuid@3.3.3",
+    "name": "uuid",
+    "escapedName": "uuid",
+    "rawSpec": "3.3.3",
     "saveSpec": null,
-    "fetchSpec": "4.17.15"
+    "fetchSpec": "3.3.3"
   },
   "_requiredBy": [
-    "/enmap",
-    "/request-promise-core"
+    "/request"
   ],
-  "_resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
-  "_spec": "4.17.15",
+  "_resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
+  "_spec": "3.3.3",
   "_where": "C:\\Users\\ADMIN\\Downloads\\hentaibot-master",
-  "author": {
-    "name": "John-David Dalton",
-    "email": "john.david.dalton@gmail.com"
+  "bin": {
+    "uuid": "bin/uuid"
+  },
+  "browser": {
+    "./lib/rng.js": "./lib/rng-browser.js",
+    "./lib/sha1.js": "./lib/sha1-browser.js",
+    "./lib/md5.js": "./lib/md5-browser.js"
   },
   "bugs": {
-    "url": "https://github.com/lodash/lodash/issues"
+    "url": "https://github.com/kelektiv/node-uuid/issues"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "contributors": [
     {
-      "name": "John-David Dalton",
-      "email": "john.david.dalton@gmail.com"
+      "name": "Robert Kieffer",
+      "email": "robert@broofa.com"
     },
     {
-      "name": "Mathias Bynens",
-      "email": "mathias@qiwi.be"
+      "name": "Christoph Tavan",
+      "email": "dev@tavan.de"
+    },
+    {
+      "name": "AJ ONeal",
+      "email": "coolaj86@gmail.com"
+    },
+    {
+      "name": "Vincent Voyer",
+      "email": "vincent@zeroload.net"
+    },
+    {
+      "name": "Roman Shtylman",
+      "email": "shtylman@gmail.com"
     }
   ],
-  "description": "Lodash modular utilities.",
-  "homepage": "https://lodash.com/",
-  "icon": "https://lodash.com/icon.svg",
+  "description": "RFC4122 (v1, v4, and v5) UUIDs",
+  "devDependencies": {
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
+    "eslint": "6.2.0",
+    "husky": "3.0.4",
+    "mocha": "6.2.0",
+    "runmd": "1.2.1",
+    "standard-version": "7.0.0"
+  },
+  "homepage": "https://github.com/kelektiv/node-uuid#readme",
   "keywords": [
-    "modules",
-    "stdlib",
-    "util"
+    "uuid",
+    "guid",
+    "rfc4122"
   ],
   "license": "MIT",
-  "main": "lodash.js",
-  "name": "lodash",
+  "name": "uuid",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lodash/lodash.git"
+    "url": "git+https://github.com/kelektiv/node-uuid.git"
   },
   "scripts": {
-    "test": "echo \"See https://travis-ci.org/lodash-archive/lodash-cli for testing details.\""
+    "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
+    "md": "runmd --watch --output=README.md README_js.md",
+    "prepare": "runmd --output=README.md README_js.md",
+    "release": "standard-version",
+    "test": "mocha test/test.js"
   },
-  "version": "4.17.15"
+  "version": "3.3.3"
 }
